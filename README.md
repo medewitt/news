@@ -21,3 +21,4 @@ The website is hosted by GitHub pages, which serves the files in the [docs](/doc
 ### Automation
 
 We use a GitHub [Action](/.github/workflows/build-website.yml) to run the `main.go` script every hour. It commits any changes to `docs/index.html`, which are automatically deployed by GitHub Pages ✨
+Trigger

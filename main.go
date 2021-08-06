@@ -32,28 +32,9 @@ type Post struct {
 
 var (
 	feeds = []string{
-		"https://themargins.substack.com/feed.xml",
-		"https://jvns.ca/atom.xml",
-		"https://joy.recurse.com/feed.atom",
-		"https://danluu.com/atom.xml",
-		"https://blog.veitheller.de/feed.rss",
-		"https://twobithistory.org/feed.xml",
-		"https://rachelbythebay.com/w/atom.xml",
-		"https://scattered-thoughts.net/rss.xml",
-
-		// My mum's food blog 💖
-		"https://gochugarugirl.com/feed/",
-
-		"https://commoncog.com/blog/rss/",
-		"https://highgrowthengineering.substack.com/feed",
-		"http://tonsky.me/blog/atom.xml",
-		"https://www.benkuhn.net/index.xml",
-
-		"https://hnrss.org/frontpage?points=50",
-		"https://solar.lowtechmagazine.com/feeds/all-en.atom.xml",
-		"https://www.slowernews.com/rss.xml",
-		"https://samstarling.co.uk/weeknotes/index.xml",
-		"https://macwright.com/rss.xml",
+		"https://statmodeling.stat.columbia.edu/feed/",
+		"http://twiv.microbeworld.libsynpro.com/twiv",
+		"https://immune.libsyn.com/rss"
 	}
 
 	// Show up to 60 days of posts

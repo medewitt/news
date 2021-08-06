@@ -146,7 +146,7 @@ func executeTemplate(writer io.Writer, templateData *TemplateData) error {
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>James Routley | Feed</title>
+		<title>Michael DeWitt | Feed</title>
 		<style>
 			@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
@@ -173,7 +173,9 @@ func executeTemplate(writer io.Writer, templateData *TemplateData) error {
 		</ol>
 
 		<footer>
-			<p><a href="https://github.com/jamesroutley/news.routley.io">What is this?</a></p>
+		        <p><a href="https://github.com/medewitt/news">What is this?</a></p>
+			<p><a href="https://github.com/jamesroutley/news.routley.io">What is this bases on</a></p>
+			<p><a href="https://michaeldewittjr.com">Main Website</a></p>
 		</footer>
 	</body>
 </html>

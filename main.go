@@ -35,6 +35,9 @@ var (
 		"https://statmodeling.stat.columbia.edu/feed/",
 		"http://twiv.microbeworld.libsynpro.com/twiv",
 		"https://immune.libsyn.com/rss",
+		"https://elevanth.org/blog/feed/",
+		"http://freerangestats.info/feed",
+		
 	}
 
 	// Show up to 60 days of posts

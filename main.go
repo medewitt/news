@@ -34,7 +34,7 @@ var (
 	feeds = []string{
 		"https://statmodeling.stat.columbia.edu/feed/",
 		"http://twiv.microbeworld.libsynpro.com/twiv",
-		"https://immune.libsyn.com/rss"
+		"https://immune.libsyn.com/rss",
 	}
 
 	// Show up to 60 days of posts

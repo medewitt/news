@@ -37,6 +37,7 @@ var (
 		"https://immune.libsyn.com/rss",
 		"https://elevanth.org/blog/feed/",
 		"http://freerangestats.info/feed",
+		"https://www.theatlantic.com/feed/channel/health/",
 		
 	}
 

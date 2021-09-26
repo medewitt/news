@@ -8,12 +8,15 @@ import (
 	"os"
 	"path"
 	"sort"
+	"fmt"
 	"sync"
 	"text/template"
 	"time"
-
-	"github.com/mmcdole/gofeed"
+	"gopkg.in/yaml.v3"
+		"github.com/mmcdole/gofeed"
 )
+
+
 
 var (
 	wg sync.WaitGroup
@@ -28,6 +31,57 @@ type Post struct {
 	Title     string
 	Published time.Time
 	Host      string
+}
+
+type Tasks struct {
+    items []string
+}
+
+// descend implements recursive descent into YAML mapping and sequence structures
+func (t *Tasks) descend(node *yaml.Node) error {
+    switch node.Kind {
+    case yaml.SequenceNode:
+        for _, item := range(node.Content) {
+            t.descend(item)
+        }
+    case yaml.MappingNode:
+        for i := 0; i < len(node.Content); i += 2 {
+            key := node.Content[i]
+            value := node.Content[i+1]
+            if key.Kind != yaml.ScalarNode ||
+                key.Value != "href" {
+                t.descend(value)
+                continue
+            }
+            if value.Kind != yaml.ScalarNode {
+                return errors.New("encountered non-scalar task")
+            }
+            t.items = append(t.items, value.Value)
+        }
+    }
+    return nil
+}
+
+// UnmarshalYAML is the unmarshaler that will be called by the YAML processor.
+func (t *Tasks) UnmarshalYAML(value *yaml.Node) error {
+    t.items = nil
+    return t.descend(value)
+}
+
+func main() {
+    var t Tasks
+   
+   yamlFile, err := ioutil.ReadFile("sites.yaml")
+   if err != nil {
+   	log.Printf("yamlFile.Get err   #%v ", err)
+   	
+   }
+   err = yaml.Unmarshal(yamlFile, &y)
+   
+   
+    for _, item := range(t.items) {
+        fmt.Println(item)
+    }
 }
 
 var (

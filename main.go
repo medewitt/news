@@ -169,6 +169,7 @@ func executeTemplate(writer io.Writer, templateData *TemplateData) error {
 		</style>
 	</head>
 	<body>
+	<P></P><cite><a href="https://michaeldewittjr.com/">home</a></cite>
 		<h1>News</h1>
 
 		<ol>
